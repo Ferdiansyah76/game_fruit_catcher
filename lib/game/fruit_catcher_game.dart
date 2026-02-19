@@ -1,5 +1,6 @@
 import 'package:flame/game.dart';
 import 'package:flutter/widgets.dart';
+import 'package:game_fruit_catcher/game/managers/audio_manager.dart';
 
 class FruitCatcherGame extends FlameGame{
   @override
@@ -10,5 +11,7 @@ class FruitCatcherGame extends FlameGame{
   @override
   Future<void> onLoad() async {
     await super.onLoad();
+    // Play background music
+    AudioManager().playBackgroundMusic(); // Update
   }
 }
