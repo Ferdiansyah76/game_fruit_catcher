@@ -1,5 +1,7 @@
+import 'package:flame/game.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:game_fruit_catcher/game/fruit_catcher_game.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,9 +27,12 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
+  late FruitCatcherGame game;
+
   @override
   void initState() {
     super.initState();
+    game = FruitCatcherGame();
   }
 
   final ValueNotifier<int> counter =ValueNotifier(1);
@@ -37,6 +42,7 @@ class _GameScreenState extends State<GameScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          GameWidget(game: game),
           Positioned(
             top: 50,
             left: 20,
