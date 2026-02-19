@@ -14,4 +14,5 @@ class FruitCatcherGame extends FlameGame{
     // Play background music
     AudioManager().playBackgroundMusic(); // Update
   }
+  void incrementScore() {}
 }
